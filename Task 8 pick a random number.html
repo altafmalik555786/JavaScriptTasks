@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick Random Number</title>
+</head>
+<body>
+    
+    <h1>Pick up a random number if you can?</h1>
+    <input type="number" placeholder="Enter Your Number from 0 to 10" id="input" >
+    <button type="button" onclick="myFun()">Submit</button>
+    <p id="demo"></p>
+ 
+
+    <script>
+        function myFun() {
+            const rndm = Math.floor(Math.random() * 11 );
+            let input = document.getElementById("input").value;
+                input = parseInt(input);
+            if (input < 0 || input > 10) {
+                document.getElementById("demo").innerHTML = "Pleaase Enter Value from 0 to 10";
+            } else {
+                if (rndm === input) {
+                document.getElementById("demo").innerHTML = "Ma Sha Allah! Good Work.";
+            } else {
+                document.getElementById("demo").innerHTML = "Oops! Didn't matched with random number by JavaScript";
+            }
+            }
+            
+        }
+    </script>
+
+</body>
+</html>

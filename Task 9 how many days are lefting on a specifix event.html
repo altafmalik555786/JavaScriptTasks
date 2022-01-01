@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Days left on event</title>
+</head>
+
+<body>
+
+    <h1> Days are lefting of Pakistan Independence </h1>
+
+    <button type="button" onclick="myFun()">Click me to Find</button>
+
+    <p id="demo"></p>
+
+
+
+    <script>
+        function myFun() {
+
+            
+            const d = new Date();
+            const eventObj = new Date( d.getFullYear(), 7, 14);
+            if (d.getMonth() == 7 && d.getDate() > 14) {
+                eventObj.setFullYear(eventObj.getFullYear() + 1);
+            }
+            const oneday = 1000 * 60 * 60 * 24;
+            document.getElementById("demo").innerHTML = Math.ceil((eventObj-d)/(oneday));
+
+            
+        }
+    </script>
+</body>
+
+</html>

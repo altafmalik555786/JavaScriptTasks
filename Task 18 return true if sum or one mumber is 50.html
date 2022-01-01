@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 18</title>
+</head>
+<body>
+    <h1>Return True if sum of two numbers or one number is 50 else return False </h1>
+    <p>Result of 25 + 25 is 50 will be True: <span id="demo"></span></p>
+    <p>Result of 50 + 25 is 75 will be True becuase one number is 50: <span id="demo1"></span></p>
+    <p>Result of 20 + 25 is 45 will be false becuase of sum or one number is not 50: <span id="demo2"></span></p>
+
+    
+    <script>
+        function myFun(n1, n2) {
+            if (n1 == 50 || n2 == 50 || (n1 + n2) == 50) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        document.getElementById("demo").innerHTML = myFun(25,25);
+        document.getElementById("demo1").innerHTML = myFun(50,25);
+        document.getElementById("demo2").innerHTML = myFun(20,25);
+    </script>
+    
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celcius to Fahrenheit</title>
+</head>
+<body>
+
+    <h1>Enter Celcius to find Fahrenheit and Enter Fehrenheith to find Celcius</h1>   
+    <p>the Formula is c/5 = (f-32)/9</p>
+
+
+    <input type="text" placeholder="Enter Celcius to find Fehrenheit" id="celcius"> 
+    <input type="text" placeholder="Enter Fehrenheit to find Celcius" id="fehrenheit"> 
+    <button type="button" onclick="myFun()">Submit</button>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+
+
+    <script>
+        function myFun() {
+            let celcius = document.getElementById("celcius").value;
+                celcius = parseInt(celcius);
+            let fehrenheit = document.getElementById("fehrenheit").value;
+                fehrenheit = parseInt(fehrenheit); 
+            let c = ((fehrenheit - 32) / 9) * 5;
+            let f = (((celcius / 5) * 9) + 32) ;
+            document.getElementById("demo").innerHTML = "You have entered Celcius is: " + celcius + "*" + 
+            " and it has finded Fehrenheit is: " + c + "*";
+
+            document.getElementById("demo2").innerHTML = "You have entered fehrenheit is: " + fehrenheit + "*" + 
+            "and it has finded Celcius is: " + f + "*"
+            ;
+        }
+    </script>
+
+    
+
+</body>
+</html>

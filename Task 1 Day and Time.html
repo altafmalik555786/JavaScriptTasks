@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Date and Time</title>
+</head>
+
+<body>
+
+
+    <p>Sample Output: Today is: <span id="day"></span></p>
+    <p>Current time is: <span id="time"></span></p>
+
+
+    <script>
+        var d = new Date();
+        var dayObj = d.getDay()
+        var result;
+
+        switch (dayObj) {
+            case 0:
+                result = "Sunday";
+                break;
+            case 1:
+                result = "Monday"
+                break;
+            case 2:
+                result = "Tuesday";
+                break;
+            case 3:
+                result = "Wednesday";
+                break;
+            case 4:
+                result = "Thursday";
+                break;
+            case 5:
+                result = "Friday";
+                break;
+            case 6:
+                result = "Satureday";
+                break;
+            default:
+                result = "Not Possible this case";
+                break;
+        
+        }
+        document.getElementById("day").innerHTML = result;
+
+        var d = new Date();
+        var hours = d.getHours();
+        var minutes = d.getMinutes();
+        var seconds = d.getSeconds();
+
+        if (hours > 12) {
+            hours = hours - 12 + " PM";
+        } else {
+            hours = hours + " AM";
+        }
+
+        document.getElementById("time").innerHTML = hours + " : " + minutes + " : " + seconds;
+    </script>
+
+</body>
+
+</html>

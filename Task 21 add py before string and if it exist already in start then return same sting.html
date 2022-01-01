@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 21</title>
+</head>
+<body>
+    <h1>Add py in front of the string if it exist py already then remain it same</h1>
+    <p>this is: <span id="demo"></span></p>
+
+
+    <script>
+
+        let lang = "thon";
+        let strPy = lang.substring(0,2);
+
+        if ( strPy !== "Py" ) {
+            lang = "Py" + lang;
+        }
+
+
+
+        document.getElementById("demo").innerHTML = lang;
+
+    </script>
+
+</body>
+</html>

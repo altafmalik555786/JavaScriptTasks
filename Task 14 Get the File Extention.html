@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Extention</title>
+</head>
+<body>
+    <h1>Get the File Extention</h1>
+    <Button type="button" onclick="myFun()">Extentions?</Button>
+    <p>The extention of "index.html" file is: <span id="html"></span></p>
+    <p>The extention of "style.css" file is: <span id="css"></span></p>
+    <p>The extention of "script.js" file is: <span id="js"></span></p>
+
+
+    
+
+    <script>
+        function myFun() {
+            var html = "index.html";
+            var html_extention = html.split(".").pop();
+        
+            var css = "style.css";
+            var css_extention = css.split(".").pop();
+        
+            var js = "script.js";
+            var js_extention = js.split(".").pop();
+            
+            document.getElementById("html").innerHTML = html_extention;
+            document.getElementById("css").innerHTML = css_extention;
+            document.getElementById("js").innerHTML = js_extention;
+        }
+    </script>
+</body>
+</html>

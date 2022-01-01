@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find leap year</title>
+</head>
+
+<body>
+
+    <h1>Here you can find the Leap Year</h1>
+
+    <input type="text" placeholder="Find leap year" id="leapYear">
+    <input type="submit" onclick="myFun()">
+
+    <p id="demo"></p>
+
+
+    <script>
+        var year, input;
+
+        function myFun() {
+            gotYear = document.getElementById("leapYear").value;
+            year = parseInt(gotYear);
+            if (isNaN(year)) {
+                input = "Please! Enter the Number";
+
+            } else {
+                remainder = year % 400;
+                if (remainder === 0) {
+                    input = year + " is the leap year";
+                } else {
+                    input = year + " is not a leap year";
+                }
+            }
+
+            document.getElementById("demo").innerHTML = input;
+        }
+    </script>
+
+
+</body>
+
+</html>

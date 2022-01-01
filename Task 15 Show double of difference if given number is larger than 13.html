@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>double of Difference</title>
+</head>
+<body>
+    <H1>double of Difference if given number is greater than 13</H1>
+    <button type="button" onclick="myFun()">Find!</button>
+    <p>The 32 - 13 = 19 and double of 19 is: <span id="demo"></span></p>
+    
+
+    <script>
+
+        function myFun(n) {
+            if (n > 13 ) {
+                return (n - 13) * 2;
+            } 
+            document.getElementById("demo").innerHTML = myFun(32);
+        }
+
+        
+
+    </script>
+</body>
+</html>

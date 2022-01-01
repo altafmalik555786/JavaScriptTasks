@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dd mm yy</title>
+</head>
+<body>
+
+    <h1>DD MM YY</h1>
+    <p> Here are different date month years formates</p>
+
+    <p>mm-dd-yy is: </p>
+    <p id="first"></p>
+
+    <br><br><br><br>
+
+    <p>mm/dd/yy</p>
+    <p id="second"></p>
+
+    <br><br><br><br>
+
+    <p>dd-mm-yy</p>
+    <p id="third"></p>
+
+    <br><br><br><br>
+
+    <p>dd/mm/yy</p>
+    <p id="four"></p>
+
+
+    <script>
+       
+        const d = new Date();
+        var date = d.getDate();
+        var month = d.getMonth();
+        month = month + 1;
+        var year = d.getFullYear();
+
+        document.getElementById("first").innerHTML = month + "-" + date + "-" + year;
+        document.getElementById("second").innerHTML = month + "/" + date + "/" + year;
+        document.getElementById("third").innerHTML = date +  "-" + month + "-" + + year;
+        document.getElementById("four").innerHTML = date +  "/" + month + "/" + + year;
+    </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is first of each month is sunday?</title>
+</head>
+<body>
+    <h1>Is first month is sunday from Range of the year choose your own</h1>
+    <input type="text" id="yearStart" placeholder="Enter Start Range Year">
+    <input type="text" id="yearEnd" placeholder="Enter End Range Year">
+
+    <button type="button" onclick="myFun()">Click me to Find</button>
+    <p id="demo"></p>
+
+
+
+
+    <script>
+        function myFun() {
+            let yearStart, yearEnd;
+            yearStart = document.getElementById("yearStart").value;
+            yearStart = parseInt(yearStart);
+            yearEnd = document.getElementById("yearEnd").value;
+            yearEnd = parseInt(yearEnd);
+            for (let year = yearStart; year <= yearEnd; year++) {
+        
+                const d = new Date(year, 0, 1);
+                var month;
+                if (d.getDay() === 0) {
+                    document.write( "<br><br><br><br>" + year + "'s first month starts from sunday" + "<br>");
+                }
+            
+            }
+        }
+    </script>
+
+</body>
+</html>

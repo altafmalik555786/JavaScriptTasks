@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable with User Defined name</title>
+</head>
+<body>
+    <h1>User Defined Name</h1>
+    <button type="button" onclick="myFun()">Usder Defined Name?</button>
+    <p id="demo"></p>
+
+
+    <script>
+        function myFun() {
+            var name = "Altaf";
+            var n = 22;
+            this[name] = n;
+            document.getElementById("demo").innerHTML = this[name];
+        }
+    </script>
+    
+</body>
+</html>

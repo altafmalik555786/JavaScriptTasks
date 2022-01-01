@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Task 19 Within 20 of 100 and 400</title>
+</head>
+
+<body>
+    <h1>Give number is Within 20 of 100 and 400</h1>
+
+    <p> 100 - 10 is:  <span id="demo"></span></p>
+    <p> 100 - 90 is:  <span id="demo1"></span></p>
+    <p> 400 - 200 is:  <span id="demo2"></span></p>
+    <p> 400 - 390 is:  <span id="demo3"></span></p>
+
+
+    <script>
+        function myFun(x) {
+            if (x < 100) {
+                if ((100 - x) <= 20) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            if (x > 100) {
+                if ((400 - x) <= 20) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+
+        document.getElementById("demo").innerHTML = myFun(10);
+        document.getElementById("demo1").innerHTML = myFun(90);
+        document.getElementById("demo2").innerHTML = myFun(200);
+        document.getElementById("demo3").innerHTML = myFun(390);
+    </script>
+
+</body>
+
+</html>
